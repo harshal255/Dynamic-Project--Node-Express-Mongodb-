@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="banner_section">
+        <div class="container">
+            <div class="row pt-5 position-relative flex">
+                <div class="col-md-6 text-center mt-5 order-2">
+                    {{!-- right side --}}
+                    <h3>{{data.title}}</h3>
+                    <p>{{data.desc}}</p>
+
+                    <button class="btn btn-primary">Click Here</button>
+                </div>
+                <div class="col-md-6 text-center order-1">
+                    {{!-- left side --}}
+                    <img src="{{data.image}}" alt="2" style="max-width: 300px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

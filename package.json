@@ -1,0 +1,23 @@
+{
+  "name": "dynamicproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/app.js -e js,hbs"
+  },
+  "author": "Harshal Kahar",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
+    "express-routes": "^1.0.1",
+    "hbs": "^4.2.0",
+    "mongoose": "^6.8.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.15",
+    "nodemon": "^2.0.20"
+  }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {{!-- for jQuery --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light py-2 border-bottom sticky-top" id="navbar">
+        <div class="container">
+            <a class="navbar-brand " href="#"><img src="{{data.brandIconUrl}}" alt="h" width="48" height="48"
+                    style="border-radius: 50px;" class="m-2">{{data.brandName}}</a>
+
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+                    {{#each data.links}}
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{this.url}}">{{this.label}}</a>
+                    </li>
+                    {{/each}}
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <script>
+        $(window).on('scroll', () => {
+            if ($(window).scrollTop()) {
+                $('nav').addClass('white');
+                $('nav').removeClass('bg-light')
+
+
+            }
+            else {
+                $('nav').removeClass('white');
+               
+
+            }
+        })
+    </script>
+
+</body>
+
+</html>
